@@ -1,12 +1,80 @@
-header {
-  background-color: gray;
-  box-align: top;
+body {
 }
 
+header {
+  box-align: top;
+  background-color: #bf8f00;
+  border-top: 1pt solid black;
+  border-bottom: 1pt solid black;
+}
+
+nav {
+  background-color: aqua;
+}
+
+main {
+}
 p {
-  color: #4d8d5567;
+  font-size: 70%;
+  padding-left: 10pt;
+}
+
+footer {
 }
 
 h1 {
   text-align: center;
+}
+
+h3 {
+  text-align: center;
+}
+
+h4 {
+  text-align: center;
+  background-color: lightgray;
+  border-top: 1pt solid black;
+  border-bottom: 1pt solid black;
+}
+
+#tablist {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#tablist li {
+  background-color: lightgrey;
+  border: 1px solid black;
+  border-bottom: none;
+  border-radius: 0.5em 0.5em 0 0;
+  display: inline;
+  font-weight: bold;
+  height: 2em;
+  padding: 0.5em 0.5em 10px;
+}
+
+#tablist li:focus,
+#tablist li:hover {
+  background-color: yellow;
+}
+
+#tablist li[aria-selected="true"] {
+  background-color: white;
+  padding: 0.5em 0.5em 11px;
+}
+
+#tabcontent {
+  background-color: white;
+  border: 1px solid black;
+  margin-top: 10px;
+  padding: 1em;
+}
+
+[aria-hidden="true"] {
+  display: none;
+}
+
+[aria-hidden="false"] {
+  display: block;
 }

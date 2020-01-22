@@ -5,9 +5,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="./styles/stylesheet.css" />
-    <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
-    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.js"
+      integrity="sha256-BTlTdQO9/fascB1drekrDVkaKd9PkwBymMlHOiG+qLI="
+      crossorigin="anonymous"
+    ></script>
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <!-- Latest compiled and minified CSS -->
@@ -15,8 +19,6 @@
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
     />
-    <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <meta
       http-equiv="Content-Security-Policy"
       content="script-src 'self' 'unsafe-inline';"
@@ -24,17 +26,130 @@
   </head>
   <body>
     <header>
-      <h1>
-        Testplan Imageabnahme
-      </h1>
+      <div class="row">
+        <h3>
+          Testplan Imageabnahme
+        </h3>
+      </div>
     </header>
+    <nav>
+        <div id="tabpanel">
+            <ul role="tablist" id="tablist">
+              <li id="link1" role="tab" aria-controls="panel-1" aria-selected="true">1. Hard- und Software</li>
+              <li id="link2" role="tab" aria-controls="panel-2" aria-selected="false">2. Testing Setup</li>
+              <li id="link3" role="tab" aria-controls="panel-3" aria-selected="false">3. MU Tests</li>
+              <li id="link3" role="tab" aria-controls="panel-3" aria-selected="false">4. IC Tests</li>
+              <li id="link3" role="tab" aria-controls="panel-3" aria-selected="false">5. BT Tests</li>
+            </ul>
+           
+            <div id="tabcontent">
+              <div id="panel-1" role="tabpanel" aria-labelledby="link1" aria-hidden="false">
+                  <div class="row">
+                      <h4>
+                        Hardware- und Softwareversionen feststellen
+                      </h4>
+                    </div>
+                      <div class="row">
+                        <div class="col-sm-2">
+                          <div class="row">
+                            <p>Testart</p>
+                          </div>
+                          <div class="row">
+                            <p>Hard- und Software</p> 
+                          </div>
+                          <div class="row">
+                            <p>Hard- und Software</p> 
+                          </div>
+                          <div class="row">
+                            <p>Hard- und Software</p> 
+                          </div>
+                      </div>
+        
+                      <div class="col-sm-2">
+                        <p>Testcase</p>
+                      </div>
+                      <div class="col-sm-4">
+                          <p>Testbeschreibung (Vorgehen)</p>
+                      </div>
+                      <div class="col-sm-2">
+                          <p>Ergebnis</p>
+                      </div>
+                      <div class="col-sm-2">
+                          <p>
+                            Kommentar / Kürzel
+                          </p>
+                      </div>
+                    </div>
+              </div>
+              <div id="panel-2" role="tabpanel" aria-labelledby="link2" aria-hidden="true">
+              <h3>Inhalt 1</h3>
+                <p> Hier kommt was hin!</p>
+              </div>
+              <div id="panel-3" role="tabpanel" aria-labelledby="link3" aria-hidden="true">
+                <h3>Inhalt 1</h3>
+                <p> Hier kommt was hin!</p>
+              </div>
+            </div>
+          </div>
+    </nav>
+    
     <main>
-      <button type="button" class="btn btn-light" id="los">
-        Cookie erstellen
-      </button>
-      <!-- JS Aufruf -->
-      <script src="script.js"></script>
+      <div class="container-fluid">
+        <div class="row">
+          <h4>allg. Hinweise zu diesem Dokument</h4>
+        </div>
+        <div class="row">
+          <p>
+            Benennung/Speicherort: Die Dateien mit den Ergebnissen werden alle
+            nach dem Schema JJJJ.MM.TT_Testart_Evtl.Zusatz benannt und im
+            OneDrive Ordner Pfad --> C:\Users\rig\P3 Group\P3_THC_Service -
+            Dokumente\Dokumentation\Testing\6 Test_Ergebnisse gespeichert.<br />
+            I.d.R. wird an alle beteiligten Personen eine Mail mit kurzer Info
+            oder Update zum aktuellsten Stand geschickt. (Die hier eingetragenen
+            Hinweise, etc. sind nur Hilfestellungen für die Vorlagen und sollen
+            vor dem Speichern natürlich gelöscht werden.) Diese Vorlage soll im
+            Ordner […]\Dokumentation\Testing\3 Abnahme im Ref- bzw Edu-Netz
+            unbedingt erhalten bleiben! Datum ggf. mehrmals angeben falls
+            beispielsweise ein anderer Tester an einem anderen Tag weitergemacht
+            hat. weitere Infos über BT sind zu finden unter: "C:\Users\poe\P3
+            Group\P3_THC_Service - Documents\Dokumentation\Testing\1 System
+            aufsetzen\ 1 BoxFlashConfig (MU und IC)" "C:\Users\poe\P3
+            Group\P3_THC_Service - Documents\Dokumentation\Testing\2 System für
+            Test aufbauen\3 Testaufbau, Anmeldung TNA Arbeitsplatz"
+          </p>
+        </div>
+        <div class="row">
+          <h4>
+            Testgrund
+          </h4>
+        </div>
+          <div class="row">
+            <p>
+                neues Image soll vor dem Ausrollen getestet werden. <br>
+                Bevor ein Image ausgeliefert werden kann, muss kurz getestet werden, 
+                ob es eventuell fehlerhafte Einstellungen gibt 
+                oder benötigte Funktionen nicht gegeben sind. 
+            </p>
+          </div>
+        </div>
+      </div>
     </main>
-    <footer></footer>
+    <footer>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <div class="container-fluid">
+        <div class="row">
+            <button type="button" class="btn btn-light" id="los">
+                Button Test
+              </button>
+          <div class="col-sm-3">
+            <textarea placeholder="Kommentarfläche"></textarea>
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
