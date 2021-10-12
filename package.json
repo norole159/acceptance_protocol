@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/norole159/acceptance_protocol#readme",
   "devDependencies": {
-    "electron": "^7.1.6"
+    "electron": "^11.5.0"
   },
   "dependencies": {
     "bootstrap": "^4.4.1",
